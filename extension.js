@@ -18,9 +18,9 @@
 
 /* exported init */
 
-const Main = imports.ui.main;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
-class Extension {
+export default class Extension {
   constructor() {}
 
   enable() {
@@ -62,8 +62,4 @@ class Extension {
     });
     this._swipeMods = [];
   }
-}
-
-function init() {
-  return new Extension();
 }
